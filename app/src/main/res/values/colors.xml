@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#37CB26</color>
+    <color name="colorPrimaryDark">#19B41E</color>
+    <color name="colorAccent">#FF0000</color>
+    <color name="colorAccentDark">#C80000</color>
+
+    <color name="background">#0C2233</color>
+    <color name="backgroundLight">#002A39</color>
+
+    <color name="bottomNavigationIcon">#29435C</color>
+
+    <color name="colorTextPrimary">#FFFFFF</color>
+    <color name="colorTextSecondary">#BBE1FA</color>
+
+    <color name="confirmed">#FF0000</color>
+    <color name="active">#03A9F4</color>
+    <color name="mild">#7945D5</color>
+    <color name="critical">#FF0000</color>
+    <color name="recovered">#00FF00</color>
+    <color name="deaths">#FFFF00</color>
+    <color name="affectedCountries">#7945D5</color>
+
+    <color name="errorColor">#B71C1C</color>
+</resources>

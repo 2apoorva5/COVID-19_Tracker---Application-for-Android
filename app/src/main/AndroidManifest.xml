@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.application.covid19tracker">
+
+    <compatible-screens>
+
+        <!-- all small size screens -->
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="xxhdpi"
+            android:screenSize="small" />
+        <screen
+            android:screenDensity="xxxhdpi"
+            android:screenSize="small" />
+        <!-- all normal size screens -->
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xxhdpi"
+            android:screenSize="normal" />
+        <screen
+            android:screenDensity="xxxhdpi"
+            android:screenSize="normal" />
+        <!-- all large size screens -->
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="xxhdpi"
+            android:screenSize="large" />
+        <screen
+            android:screenDensity="xxxhdpi"
+            android:screenSize="large" />
+        <!-- all xlarge size screens -->
+        <screen
+            android:screenDensity="mdpi"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="hdpi"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="xhdpi"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="xxhdpi"
+            android:screenSize="xlarge" />
+        <screen
+            android:screenDensity="xxxhdpi"
+            android:screenSize="xlarge" />
+    </compatible-screens>
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:fullBackupOnly="false"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/app_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:icon, android:allowBackup">
+        <activity android:name=".IndiaTrackerActivity" />
+        <activity android:name=".MythBustersActivity" />
+        <activity android:name=".WhenHowActivity" />
+        <activity android:name=".BeReadyActivity" />
+        <activity android:name=".AskWHOActivity" />
+        <activity android:name=".CountryDetailsActivity" />
+        <activity android:name=".AffectedCountriesActivity" />
+        <activity android:name=".SymptomsActivity" />
+        <activity android:name=".PreventionActivity" />
+        <activity android:name=".OverviewActivity" />
+        <activity android:name=".StatisticsActivity" />
+        <activity android:name=".SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

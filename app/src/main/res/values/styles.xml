@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/background</item>
+        <item name="colorPrimaryDark">@color/background</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="BottomNavigationItemText" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/comfortaa</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="ErrorAlert" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorTextPrimary</item>
+        <item name="android:fontFamily">@font/comfortaa</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

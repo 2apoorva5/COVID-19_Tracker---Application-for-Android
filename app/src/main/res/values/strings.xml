@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">COVID-19</string>
+
+    <string name="overview1">Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.</string>
+    <string name="overview2">Most people infected with the COVID-19 virus will experience mild to moderate respiratory illness and recover without requiring special treatment.  Older people, and those with underlying medical problems like cardiovascular disease, diabetes, chronic respiratory disease, and cancer are more likely to develop serious illness.</string>
+    <string name="overview3">The best way to prevent and slow down transmission is be well informed about the COVID-19 virus, the disease it causes and how it spreads. Protect yourself and others from infection by washing your hands or using an alcohol based rub frequently and not touching your face. </string>
+    <string name="overview4">The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when an infected person coughs or sneezes, so it’s important that you also practice respiratory etiquette (for example, by coughing into a flexed elbow).</string>
+    <string name="overview5">At this time, there are no specific vaccines or treatments for COVID-19. However, there are many ongoing clinical trials evaluating potential treatments. WHO will continue to provide updated information as soon as clinical findings become available.</string>
+
+    <string name="ovFAQ1">Coronaviruses are a large family of viruses which may cause illness in animals or humans.  In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19.</string>
+    <string name="ovFAQ2">COVID-19 is the infectious disease caused by the most recently discovered coronavirus. This new virus and disease were unknown before the outbreak began in Wuhan, China, in December 2019. COVID-19 is now a pandemic affecting many countries globally.</string>
+    <string name="ovFAQ3">People can catch COVID-19 from others who have the virus. The disease spreads primarily from person to person through small droplets from the nose or mouth, which are expelled when a person with COVID-19 coughs, sneezes, or speaks. These droplets are relatively heavy, do not travel far and quickly sink to the ground. People can catch COVID-19 if they breathe in these droplets from a person infected with the virus. This is why it is important to stay at least 1 metre (3 feet) away from others. These droplets can land on objects and surfaces around the person such as tables, doorknobs and handrails. People can become infected by touching these objects or surfaces, then touching their eyes, nose or mouth. This is why it is important to wash your hands regularly with soap and water or clean with alcohol-based hand rub.</string>
+    <string name="ovFAQ4">COVID-19 is mainly spread through respiratory droplets expelled by someone who is coughing or has other symptoms such as fever or tiredness. Many people with COVID-19 experience only mild symptoms. This is particularly true in the early stages of the disease. It is possible to catch COVID-19 from someone who has just a mild cough and does not feel ill.</string>
+    <string name="ovFAQ5">Research indicates that children and adolescents are just as likely to become infected as any other age group and can spread the disease.
+
+Evidence to date suggests that children and young adults are less likely to get severe disease, but severe cases can still happen in these age groups.
+
+Children and adults should follow the same guidance on self-quarantine and self-isolation if there is a risk they have been exposed or are showing symptoms. It is particularly important that children avoid contact with older people and others who are at risk of more severe disease.</string>
+    <string name="ovFAQ6">Not yet. To date, there is no vaccine and no specific antiviral medicines against COVID-19. However, people, particularly those with serious illness, may need to be hospitalized so that they can receive life-saving treatment for complications.. Most patients recover thanks to such care.
+
+Possible vaccines and some specific drug treatments are currently under investigation. They are being tested through clinical trials. WHO is coordinating efforts to develop vaccines and medicines to prevent and treat COVID-19.</string>
+    <string name="ovFAQ7">COVID-19 is spread through human-to-human transmission.
+
+We already know a lot about other viruses in the coronavirus family and most of these types of viruses have an origin in animals. The COVID-19 virus (also called SARS-CoV-2) is a new virus in humans. The possible animal source of COVID-19 has not yet been confirmed but research is ongoing.</string>
+    <string name="ovFAQ8">Several dogs and cats (domestic cats and a tiger) in contact with infected humans have tested positive for COVID-19. In addition, ferrets appear to be susceptible to the infection. In experimental conditions, both cats and ferrets were able to transmit infection to other animals of the same species, but there is no evidence that these animals can transmit the disease to human and play a role in spreading COVID-19. COVID-19 is mainly spread through droplets produced when an infected person coughs, sneezes, or speaks.</string>
+    <string name="ovFAQ9">The most important thing to know about coronavirus on surfaces is that they can easily be cleaned with common household disinfectants that will kill the virus. Studies have shown that the COVID-19 virus can survive for up to 72 hours on plastic and stainless steel, less than 4 hours on copper and less than 24 hours on cardboard.</string>
+    <string name="ovFAQ10">While initial investigations suggest the virus may be present in faeces in some cases, to date, there have not been reports of faecal-oral transmission of COVID-19. Additionally, there is no evidence to date on the survival of the COVID-19 virus in water or sewage.</string>
+
+
+    <string name="symptoms1">The COVID-19 virus affects different people in different ways.  COVID-19 is a respiratory disease and most infected people will develop mild to moderate symptoms and recover without requiring special treatment.</string>
+    <string name="symptoms2">People who have underlying medical conditions and those over 60 years old have a higher risk of developing severe disease and death.</string>
+    <string name="symptoms3">People with mild symptoms who are otherwise healthy should self-isolate and contact their medical provider or a COVID-19 information line for advice on testing and referral.</string>
+    <string name="symptoms4">People with fever, cough or difficulty breathing should call their doctor and seek medical attention.</string>
+
+    <string name="spFAQ1">The most common symptoms of COVID-19 are fever, dry cough, and tiredness. Some patients may have aches and pains, nasal congestion, sore throat or diarrhea. These symptoms are usually mild and begin gradually. Some people become infected but only have very mild symptoms. Most people (about 80%) recover from the disease without needing hospital treatment. Around 1 out of every 5 people who gets COVID-19 becomes seriously ill and develops difficulty breathing. Older people, and those with underlying medical problems like high blood pressure, heart and lung problems, diabetes, or cancer , are at higher risk of developing serious illness. However anyone can catch COVID-19 and become seriously ill. Even people with very mild symptoms of COVID-19 can transmit the virus. People of all ages who experience fever, cough and difficulty breathing should seek medical attention.</string>
+    <string name="spFAQ2_1">If you have minor symptoms, such as a slight cough or a mild fever, there is generally no need to seek medical care. Stay at home, self-isolate and monitor your symptoms. Follow national guidance on self-isolation.</string>
+    <string name="spFAQ2_2">However, if you live in an area with malaria or dengue fever it is important that you do not ignore symptoms of fever.  Seek medical help.  When you attend the health facility wear a mask if possible, keep at least 1 metre distance from other people and do not touch surfaces with your hands. If it is a child who is sick help the child stick to this advice.</string>
+    <string name="spFAQ2_3">Seek immediate medical care if you have difficulty breathing or pain/pressure in the chest. If possible, call your health care provider in advance, so he/she can direct you to the right health facility.</string>
+    <string name="spFAQ3">The time between exposure to COVID-19 and the moment when symptoms start is commonly around five to six days but can range from 1 – 14 days.</string>
+
+    <string name="prevention1">Stay aware of the latest information on the COVID-19 outbreak. Most people who become infected experience mild illness and recover, but it can be more severe for others. Take care of your health and protect others by doing the following:</string>
+    <string name="prevention2">Regularly and thoroughly clean your hands with an alcohol-based hand rub or wash them with soap and water.</string>
+    <string name="prevention3">Why? Washing your hands with soap and water or using alcohol-based hand rub kills viruses that may be on your hands.</string>
+    <string name="prevention4">Maintain at least 1 metre (3 feet) distance between yourself and anyone who is coughing or sneezing.</string>
+    <string name="prevention5">Why? When someone coughs or sneezes they spray small liquid droplets from their nose or mouth which may contain virus. If you are too close, you can breathe in the droplets, including the COVID-19 virus if the person coughing has the disease.</string>
+    <string name="prevention6">Why? Hands touch many surfaces and can pick up viruses. Once contaminated, hands can transfer the virus to your eyes, nose or mouth. From there, the virus can enter your body and can make you sick.</string>
+    <string name="prevention7">Make sure you, and the people around you, follow good respiratory hygiene. This means covering your mouth and nose with your bent elbow or tissue when you cough or sneeze. Then dispose of the used tissue immediately.</string>
+    <string name="prevention8">Why? Droplets spread virus. By following good respiratory hygiene you protect the people around you from viruses such as cold, flu and COVID-19.</string>
+    <string name="prevention9">Stay home if you feel unwell. If you have a fever, cough and difficulty breathing, seek medical attention and call in advance. Follow the directions of your local health authority.</string>
+    <string name="prevention10">Why? National and local authorities will have the most up to date information on the situation in your area. Calling in advance will allow your health care provider to quickly direct you to the right health facility. This will also protect you and help prevent spread of viruses and other infections.</string>
+    <string name="prevention11">Stay informed on the latest developments about COVID-19. Follow advice given by your healthcare provider, your national and local public health authority or your employer on how to protect yourself and others from COVID-19.</string>
+    <string name="prevention12">Why? National and local authorities will have the most up to date information on whether COVID-19 is spreading in your area. They are best placed to advise on what people in your area should be doing to protect themselves.</string>
+
+    <string name="pvFAQ1">Practicing hand and respiratory hygiene is important at ALL times and is the best way to protect others and yourself.
+
+When possible maintain at least a 1 metre (3 feet) distance between yourself and others. This is especially important if you are standing by someone who is coughing or sneezing. Since some infected persons may not yet be exhibiting symptoms or their symptoms may be mild, maintaining a physical distance with everyone is a good idea if you are in an area where COVID-19 is circulating.</string>
+    <string name="pvFAQ2_1">If you have been in close contact with someone with COVID-19, you may be infected.
+
+Close contact means that you live with or have been in settings of less than 1 metre from those who have the disease. In these cases, it is best to stay at home.
+
+However, if you live in an area with malaria or dengue fever it is important that you do not ignore symptoms of fever. Seek medical help. When you attend the health facility wear a mask if possible, keep at least 1 metre distant from other people and do not touch surfaces with your hands. If it is a child who is sick help the child stick to this advice.</string>
+    <string name="pvFAQ2_2">If you do not live in an area with malaria or dengue fever please do the following:</string>
+    <string name="pvFAQ2_3">&#8226; If you become ill, even with very mild symptoms you must self-isolate</string>
+    <string name="pvFAQ2_4">&#8226; Even if you don’t think you have been exposed to COVID-19 but develop symptoms, then self-isolate and monitor yourself</string>
+    <string name="pvFAQ2_5">&#8226; You are more likely to infect others in the early stages of the disease when you just have mild symptoms, therefore early self-isolation is very important.</string>
+    <string name="pvFAQ2_6">&#8226; If you do not have symptoms, but have been exposed to an infected person, self-quarantine for 14 days.</string>
+    <string name="pvFAQ3">Self-isolation is an important measure taken by those who have COVID-19 symptoms to avoid infecting others in the community, including family members.
+
+Self-isolation is when a person who is experiencing fever, cough or other COVID-19 symptoms stays at home and does not go to work, school or public places. This can be voluntarily or based on his/her health care provider’s recommendation. However, if you live in an area with malaria or dengue fever it is important that you do not ignore symptoms of fever. Seek medical help. When you attend the health facility wear a mask if possible, keep at least 1 metre distant from other people and do not touch surfaces with your hands. If it is a child who is sick help the child stick to this advice.</string>
+    <string name="pvFAQ4">When grocery shopping, keep at least 1-metre distance from others and avoid touching your eyes, mouth and nose. If possible, sanitize the handles of shopping trolleys or baskets before shopping. Once home, wash your hands thoroughly and also after handling and storing your purchased products.
+
+There is currently no confirmed case of COVID-19 transmitted through food or food packaging.</string>
+    <string name="pvFAQ5">No. Antibiotics do not work against viruses; they only work on bacterial infections. COVID-19 is caused by a virus, so antibiotics do not work. Antibiotics should not be used as a means of prevention or treatment of COVID-19. In hospitals physicians will sometimes use antibiotics to prevent or treat secondary bacterial infections which can be a complication of COVID-19 in severely ill patients. They should only be used as directed by a physician to treat a bacterial infection.</string>
+
+
+    <string name="mask11">&#8226; Before putting on a mask, clean hands with alcohol-based hand rub or soap and water.</string>
+    <string name="mask12">&#8226; Cover mouth and nose with mask and make sure there are no gaps between your face and the mask.</string>
+    <string name="mask13">&#8226; Avoid touching the mask while using it; if you do, clean your hands with alcohol-based hand rub or soap and water.</string>
+    <string name="mask14">&#8226; Replace the mask with a new one as soon as it is damp and do not re-use single-use masks.</string>
+    <string name="mask15">&#8226; To remove the mask: remove it from behind (do not touch the front of mask); discard immediately in a closed bin; clean hands with alcohol-based hand rub or soap and water.</string>
+
+    <string name="mask21">&#8226; If you are healthy, you only need to wear a mask if you are taking care of a person with COVID-19.</string>
+    <string name="mask22">&#8226; Wear a mask if you are coughing or sneezing.</string>
+    <string name="mask23">&#8226; Masks are effective only when used in combination with frequent hand-cleaning with alcohol-based hand rub or soap and water.</string>
+    <string name="mask24">&#8226; If you wear a mask, then you must know how to use it and dispose of it properly.</string>
+
+
+    <string name="default_notification_channel_id">default</string>
+    <string name="default_notification_channel_name">COVID-19INDIA</string>
+    <string name="text_confirmed_cases">Confirmed cases in India reaches %s</string>
+    <string name="text_last_updated">Last updated %s</string>
+</resources>

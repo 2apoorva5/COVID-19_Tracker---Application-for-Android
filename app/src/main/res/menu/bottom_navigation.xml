@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_statistics"
+        android:icon="@drawable/statistics"
+        android:orderInCategory="100"
+        android:title="Statistics">
+
+    </item>
+
+    <item
+        android:id="@+id/menu_overview"
+        android:icon="@drawable/overview"
+        android:orderInCategory="200"
+        android:title="Overview">
+
+    </item>
+
+    <item
+        android:id="@+id/menu_symptoms"
+        android:icon="@drawable/symptoms"
+        android:orderInCategory="300"
+        android:title="Symptoms">
+
+    </item>
+
+    <item
+        android:id="@+id/menu_prevention"
+        android:icon="@drawable/prevention"
+        android:orderInCategory="400"
+        android:title="Prevention">
+
+    </item>
+
+</menu>

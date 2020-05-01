@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".IndiaTrackerActivity">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/arrow_back"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/back"
+                app:layout_constraintBottom_toBottomOf="@+id/logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/logo" />
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/comfortaa_bold"
+                android:text="COVID-19INDIA"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/comfortaa"
+                android:text="Sunday, January 25 2020"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="22sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/heading" />
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/progress"
+                style="@style/AVLoadingIndicatorView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:indicatorColor="@color/colorAccent"
+                app:indicatorName="BallClipRotateMultipleIndicator"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date"
+                tools:visibility="gone" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/date"
+                tools:visibility="visible">
+
+                <TextView
+                    android:id="@+id/last_updated"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/didact_gothic"
+                    android:text="Last updated 24 hour 24 minutes ago"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/active"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/cnfmd_iv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/confirmed"
+                    android:tint="@color/confirmed"
+                    app:layout_constraintEnd_toStartOf="@+id/actv_iv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/last_updated" />
+
+                <ImageView
+                    android:id="@+id/actv_iv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/active"
+                    android:tint="@color/active"
+                    app:layout_constraintEnd_toStartOf="@+id/rcvrd_iv"
+                    app:layout_constraintStart_toEndOf="@+id/cnfmd_iv"
+                    app:layout_constraintTop_toBottomOf="@+id/last_updated" />
+
+                <ImageView
+                    android:id="@+id/rcvrd_iv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/recovered"
+                    android:tint="@color/recovered"
+                    app:layout_constraintEnd_toStartOf="@+id/dcsd_iv"
+                    app:layout_constraintStart_toEndOf="@+id/actv_iv"
+                    app:layout_constraintTop_toBottomOf="@+id/last_updated" />
+
+                <ImageView
+                    android:id="@+id/dcsd_iv"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/deceased"
+                    android:tint="@color/deaths"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/rcvrd_iv"
+                    app:layout_constraintTop_toBottomOf="@+id/last_updated" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/comfortaa"
+                    android:text="Confirmed"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/confirmed"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/cnfmd_iv"
+                    app:layout_constraintStart_toStartOf="@+id/cnfmd_iv"
+                    app:layout_constraintTop_toBottomOf="@+id/cnfmd_iv" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/comfortaa"
+                    android:text="Active"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/active"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/actv_iv"
+                    app:layout_constraintStart_toStartOf="@+id/actv_iv"
+                    app:layout_constraintTop_toBottomOf="@+id/actv_iv" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/comfortaa"
+                    android:text="Recovered"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/recovered"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/rcvrd_iv"
+                    app:layout_constraintStart_toStartOf="@+id/rcvrd_iv"
+                    app:layout_constraintTop_toBottomOf="@+id/rcvrd_iv" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/comfortaa"
+                    android:text="Deceased"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/deaths"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/dcsd_iv"
+                    app:layout_constraintStart_toStartOf="@+id/dcsd_iv"
+                    app:layout_constraintTop_toBottomOf="@+id/dcsd_iv" />
+
+                <TextView
+                    android:id="@+id/confirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/didact_gothic"
+                    android:text="00000"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/confirmed"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/textView1"
+                    app:layout_constraintStart_toStartOf="@+id/textView1"
+                    app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+                <TextView
+                    android:id="@+id/active"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/didact_gothic"
+                    android:text="00000"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/active"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/textView2"
+                    app:layout_constraintStart_toStartOf="@+id/textView2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                <TextView
+                    android:id="@+id/recovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/didact_gothic"
+                    android:text="00000"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/recovered"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/textView3"
+                    app:layout_constraintStart_toStartOf="@+id/textView3"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+                <TextView
+                    android:id="@+id/deceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/didact_gothic"
+                    android:text="00000"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/deaths"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/textView4"
+                    app:layout_constraintStart_toStartOf="@+id/textView4"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+                <TextView
+                    android:id="@+id/new_confirmed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:alpha="0.5"
+                    android:fontFamily="@font/didact_gothic"
+                    android:text="[+0000]"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/confirmed"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/confirmed"
+                    app:layout_constraintStart_toStartOf="@+id/confirmed"
+                    app:layout_constraintTop_toBottomOf="@+id/confirmed" />
+
+                <TextView
+                    android:id="@+id/new_recovered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:alpha="0.5"
+                    android:fontFamily="@font/didact_gothic"
+                    android:text="[+000]"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/recovered"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/recovered"
+                    app:layout_constraintStart_toStartOf="@+id/recovered"
+                    app:layout_constraintTop_toBottomOf="@+id/recovered" />
+
+                <TextView
+                    android:id="@+id/new_deceased"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:alpha="0.5"
+                    android:fontFamily="@font/didact_gothic"
+                    android:text="[+000]"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/deaths"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="@+id/deceased"
+                    app:layout_constraintStart_toStartOf="@+id/deceased"
+                    app:layout_constraintTop_toBottomOf="@+id/deceased" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:text="State-wise Scenario"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/new_confirmed" />
+
+                <TextView
+                    android:id="@+id/state_header"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@color/backgroundLight"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:padding="8dp"
+                    android:text="State/UT"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/cnfmd_header"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <TextView
+                    android:id="@+id/cnfmd_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@color/backgroundLight"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:padding="8dp"
+                    android:text="CNFMD"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/confirmed"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/actv_header"
+                    app:layout_constraintStart_toEndOf="@+id/state_header"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <TextView
+                    android:id="@+id/actv_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@color/backgroundLight"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:padding="8dp"
+                    android:text="ACTV"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/active"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/rcvrd_header"
+                    app:layout_constraintStart_toEndOf="@+id/cnfmd_header"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <TextView
+                    android:id="@+id/rcvrd_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="2dp"
+                    android:background="@color/backgroundLight"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:padding="8dp"
+                    android:text="RCVRD"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/recovered"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/dcsd_header"
+                    app:layout_constraintStart_toEndOf="@+id/actv_header"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <TextView
+                    android:id="@+id/dcsd_header"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/backgroundLight"
+                    android:fontFamily="@font/comfortaa_bold"
+                    android:padding="8dp"
+                    android:text="DCSD"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="@color/deaths"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/rcvrd_header"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+                <ListView
+                    android:id="@+id/state_list"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="8dp"
+                    android:clipToPadding="false"
+                    android:paddingBottom="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/state_header" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
