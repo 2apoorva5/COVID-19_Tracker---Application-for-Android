@@ -1,10 +1,5 @@
 package com.application.covid19tracker;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.widget.NestedScrollView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.SpannableString;
@@ -15,6 +10,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.widget.NestedScrollView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -27,7 +28,6 @@ import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.tapadoo.alerter.Alerter;
-import com.wang.avi.AVLoadingIndicatorView;
 
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
@@ -52,8 +52,6 @@ public class StatisticsActivity extends AppCompatActivity {
     NestedScrollView nestedScrollView;
 
     PieChart pieChart;
-
-    AVLoadingIndicatorView progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +80,6 @@ public class StatisticsActivity extends AppCompatActivity {
         trackIndia = findViewById(R.id.track_india);
         trackCountries = findViewById(R.id.track_countries);
         pieChart = findViewById(R.id.pie_chart);
-        progress = findViewById(R.id.progress);
         nestedScrollView = findViewById(R.id.nested_scroll_view);
 
         YoYo.with(Techniques.Flash)
@@ -115,8 +112,6 @@ public class StatisticsActivity extends AppCompatActivity {
                     fetchData();
                     swipeRefreshLayout.setRefreshing(false);
                 } else {
-                    progress.show();
-                    progress.setVisibility(View.VISIBLE);
                     nestedScrollView.setVisibility(View.GONE);
                     swipeRefreshLayout.setRefreshing(false);
                     Alerter.create(StatisticsActivity.this)
@@ -144,8 +139,6 @@ public class StatisticsActivity extends AppCompatActivity {
                     fetchData();
                     swipeRefreshLayout.setRefreshing(false);
                 } else {
-                    progress.show();
-                    progress.setVisibility(View.VISIBLE);
                     nestedScrollView.setVisibility(View.GONE);
                     swipeRefreshLayout.setRefreshing(false);
                     Alerter.create(StatisticsActivity.this)
@@ -199,16 +192,13 @@ public class StatisticsActivity extends AppCompatActivity {
 
     private void fetchData() {
         String url = "https://corona.lmao.ninja/v2/all/";
-        progress.show();
         StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
-                    progress.hide();
-                    progress.setVisibility(View.GONE);
                     nestedScrollView.setVisibility(View.VISIBLE);
                     swipeRefreshLayout.setRefreshing(false);
-                    JSONObject jsonObject = new JSONObject(response.toString());
+                    JSONObject jsonObject = new JSONObject(response);
 
                     pieChart.addPieSlice(new PieModel("Confirmed", Integer.parseInt(jsonObject.getString("cases")), getResources().getColor(R.color.confirmed)));
                     pieChart.addPieSlice(new PieModel("Active", Integer.parseInt(jsonObject.getString("active")), getResources().getColor(R.color.active)));
@@ -277,8 +267,6 @@ public class StatisticsActivity extends AppCompatActivity {
                     });
 
                 } catch (JSONException e) {
-                    progress.hide();
-                    progress.setVisibility(View.GONE);
                     nestedScrollView.setVisibility(View.GONE);
                     swipeRefreshLayout.setRefreshing(false);
                     Alerter.create(StatisticsActivity.this)
@@ -299,8 +287,6 @@ public class StatisticsActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                progress.hide();
-                progress.setVisibility(View.GONE);
                 nestedScrollView.setVisibility(View.GONE);
                 swipeRefreshLayout.setRefreshing(false);
                 Alerter.create(StatisticsActivity.this)

@@ -19,11 +19,12 @@
         android:textAlignment="textStart"
         android:textAllCaps="false"
         android:textColor="@color/colorTextSecondary"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@+id/cnfmd_value"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SmallSp" />
 
     <TextView
         android:id="@+id/cnfmd_value"
@@ -38,12 +39,13 @@
         android:textAlignment="textEnd"
         android:textAllCaps="false"
         android:textColor="@color/colorTextSecondary"
-        android:textSize="11sp"
+        android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/state_name"
         app:layout_constraintEnd_toStartOf="@+id/actv_value"
         app:layout_constraintStart_toEndOf="@+id/state_name"
-        app:layout_constraintTop_toTopOf="@+id/state_name" />
+        app:layout_constraintTop_toTopOf="@+id/state_name"
+        tools:ignore="SmallSp" />
 
     <TextView
         android:id="@+id/actv_value"
@@ -58,12 +60,13 @@
         android:textAlignment="textEnd"
         android:textAllCaps="false"
         android:textColor="@color/colorTextSecondary"
-        android:textSize="11sp"
+        android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/cnfmd_value"
         app:layout_constraintEnd_toStartOf="@+id/rcvrd_value"
         app:layout_constraintStart_toEndOf="@+id/cnfmd_value"
-        app:layout_constraintTop_toTopOf="@+id/cnfmd_value" />
+        app:layout_constraintTop_toTopOf="@+id/cnfmd_value"
+        tools:ignore="SmallSp" />
 
     <TextView
         android:id="@+id/rcvrd_value"
@@ -78,12 +81,13 @@
         android:textAlignment="textEnd"
         android:textAllCaps="false"
         android:textColor="@color/colorTextSecondary"
-        android:textSize="11sp"
+        android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/actv_value"
         app:layout_constraintEnd_toStartOf="@+id/dcsd_value"
         app:layout_constraintStart_toEndOf="@+id/actv_value"
-        app:layout_constraintTop_toTopOf="@+id/actv_value" />
+        app:layout_constraintTop_toTopOf="@+id/actv_value"
+        tools:ignore="SmallSp" />
 
     <TextView
         android:id="@+id/dcsd_value"
@@ -98,11 +102,12 @@
         android:textAlignment="textEnd"
         android:textAllCaps="false"
         android:textColor="@color/colorTextSecondary"
-        android:textSize="11sp"
+        android:textSize="10sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/rcvrd_value"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/rcvrd_value"
-        app:layout_constraintTop_toTopOf="@+id/rcvrd_value" />
+        app:layout_constraintTop_toTopOf="@+id/rcvrd_value"
+        tools:ignore="SmallSp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

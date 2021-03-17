@@ -3,73 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.application.covid19tracker">
 
-    <compatible-screens>
-
-        <!-- all small size screens -->
-        <screen
-            android:screenDensity="mdpi"
-            android:screenSize="small" />
-        <screen
-            android:screenDensity="hdpi"
-            android:screenSize="small" />
-        <screen
-            android:screenDensity="xhdpi"
-            android:screenSize="small" />
-        <screen
-            android:screenDensity="xxhdpi"
-            android:screenSize="small" />
-        <screen
-            android:screenDensity="xxxhdpi"
-            android:screenSize="small" />
-        <!-- all normal size screens -->
-        <screen
-            android:screenDensity="mdpi"
-            android:screenSize="normal" />
-        <screen
-            android:screenDensity="hdpi"
-            android:screenSize="normal" />
-        <screen
-            android:screenDensity="xhdpi"
-            android:screenSize="normal" />
-        <screen
-            android:screenDensity="xxhdpi"
-            android:screenSize="normal" />
-        <screen
-            android:screenDensity="xxxhdpi"
-            android:screenSize="normal" />
-        <!-- all large size screens -->
-        <screen
-            android:screenDensity="mdpi"
-            android:screenSize="large" />
-        <screen
-            android:screenDensity="hdpi"
-            android:screenSize="large" />
-        <screen
-            android:screenDensity="xhdpi"
-            android:screenSize="large" />
-        <screen
-            android:screenDensity="xxhdpi"
-            android:screenSize="large" />
-        <screen
-            android:screenDensity="xxxhdpi"
-            android:screenSize="large" />
-        <!-- all xlarge size screens -->
-        <screen
-            android:screenDensity="mdpi"
-            android:screenSize="xlarge" />
-        <screen
-            android:screenDensity="hdpi"
-            android:screenSize="xlarge" />
-        <screen
-            android:screenDensity="xhdpi"
-            android:screenSize="xlarge" />
-        <screen
-            android:screenDensity="xxhdpi"
-            android:screenSize="xlarge" />
-        <screen
-            android:screenDensity="xxxhdpi"
-            android:screenSize="xlarge" />
-    </compatible-screens>
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

@@ -1,20 +1,19 @@
 package com.application.covid19tracker;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.widget.NestedScrollView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.widget.NestedScrollView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.application.covid19tracker.Client.Internet;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 import com.tapadoo.alerter.Alerter;
-import com.wang.avi.AVLoadingIndicatorView;
 
 import org.eazegraph.lib.charts.PieChart;
 import org.eazegraph.lib.models.PieModel;
@@ -32,7 +31,6 @@ public class CountryDetailsActivity extends AppCompatActivity {
     TextView heading, date, newCases, totalCases, newDeaths, totalDeaths, activeCases, mildCases, criticalCases,
             closedCases, recoveredCases, deathCases, casesPerMillion, deathsPerMillion, totalTests, testsPerMillion;
     PieChart pieChart;
-    AVLoadingIndicatorView progress;
     NestedScrollView nestedScrollView;
 
     SwipeRefreshLayout swipeRefreshLayout;
@@ -64,7 +62,6 @@ public class CountryDetailsActivity extends AppCompatActivity {
         totalTests = findViewById(R.id.total_tests);
         testsPerMillion = findViewById(R.id.tests_per_million);
         pieChart = findViewById(R.id.pie_chart);
-        progress = findViewById(R.id.progress);
         nestedScrollView = findViewById(R.id.nested_scroll_view);
         swipeRefreshLayout = findViewById(R.id.swipe_refresh_layout);
 
@@ -100,13 +97,9 @@ public class CountryDetailsActivity extends AppCompatActivity {
             @Override
             public void run() {
                 if (Internet.isConnectedToInternet(CountryDetailsActivity.this)) {
-                    progress.hide();
-                    progress.setVisibility(View.GONE);
                     nestedScrollView.setVisibility(View.VISIBLE);
                     swipeRefreshLayout.setRefreshing(false);
                 } else {
-                    progress.show();
-                    progress.setVisibility(View.VISIBLE);
                     nestedScrollView.setVisibility(View.GONE);
                     swipeRefreshLayout.setRefreshing(false);
                     Alerter.create(CountryDetailsActivity.this)
@@ -130,13 +123,9 @@ public class CountryDetailsActivity extends AppCompatActivity {
             @Override
             public void onRefresh() {
                 if (Internet.isConnectedToInternet(CountryDetailsActivity.this)) {
-                    progress.hide();
-                    progress.setVisibility(View.GONE);
                     nestedScrollView.setVisibility(View.VISIBLE);
                     swipeRefreshLayout.setRefreshing(false);
                 } else {
-                    progress.show();
-                    progress.setVisibility(View.VISIBLE);
                     nestedScrollView.setVisibility(View.GONE);
                     swipeRefreshLayout.setRefreshing(false);
                     Alerter.create(CountryDetailsActivity.this)

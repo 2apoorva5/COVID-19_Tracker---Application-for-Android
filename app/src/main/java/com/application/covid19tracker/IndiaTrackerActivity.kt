@@ -25,7 +25,6 @@ import com.application.covid19tracker.Client.Client
 import com.application.covid19tracker.Client.Internet
 import com.application.covid19tracker.Model.Response
 import com.application.covid19tracker.Model.StatewiseItem
-import com.bumptech.glide.Glide
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
 import com.google.gson.Gson
@@ -73,14 +72,10 @@ class IndiaTrackerActivity : AppCompatActivity() {
 
         swipe_refresh_layout.post {
             if (Internet.isConnectedToInternet(applicationContext)) {
-                progress.hide()
-                progress.visibility = View.GONE
                 constraint_layout.visibility = View.VISIBLE
                 fetchResults()
                 swipe_refresh_layout.isRefreshing = false
             } else {
-                progress.show()
-                progress.visibility = View.VISIBLE
                 constraint_layout.visibility = View.GONE
                 swipe_refresh_layout.isRefreshing = false
                 Toast.makeText(applicationContext, "No Internet Connection!", Toast.LENGTH_LONG).show()
@@ -89,14 +84,10 @@ class IndiaTrackerActivity : AppCompatActivity() {
 
         swipe_refresh_layout.setOnRefreshListener {
             if (Internet.isConnectedToInternet(applicationContext)) {
-                progress.hide()
-                progress.visibility = View.GONE
                 constraint_layout.visibility = View.VISIBLE
                 fetchResults()
                 swipe_refresh_layout.isRefreshing = false
             } else {
-                progress.show()
-                progress.visibility = View.VISIBLE
                 constraint_layout.visibility = View.GONE
                 swipe_refresh_layout.isRefreshing = false
                 Toast.makeText(applicationContext, "No Internet Connection!", Toast.LENGTH_LONG).show()
@@ -222,8 +213,8 @@ class IndiaTrackerActivity : AppCompatActivity() {
                 val result = Gson().fromJson(response.body?.string(), Response::class.java)
                 val totalDetails = result.statewise[0]
 
-                val confirmedCases : String? = totalDetails.confirmed
-                val newCases : String? = totalDetails.deltaconfirmed
+                val confirmedCases: String? = totalDetails.confirmed
+                val newCases: String? = totalDetails.deltaconfirmed
 
                 showNotification(
                         confirmedCases.plus("  [+").plus(newCases).plus("]") ?: "",
